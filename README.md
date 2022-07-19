@@ -1,2 +1,13 @@
-# ti-academy-bootcamp
-A repository with contents seen during a coding bootcamp from TI Academy. / Um repositório com os conteúdos vistos durante o bootcamp na TI Academy..
+Contents seen and practiced:
+
+- HTML5; <br>
+- CSS3; <br>
+- JavaScript; <br>
+
+__________________________________________
+
+Conteúdos vistos e praticados:
+
+- HTML5; <br>
+- CSS3; <br>
+- JavaScript; <br>
