@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 6</title>
+</head>
+<script>
+    //Tipos de variáveis
+    var exemplo1 = "Variável var";      //global
+    let exemplo2 = "Variável let";      //global
+    const exemplo3 = "Variável const";  //global e não pode ser alterada
+
+    if (true){
+        let letDentroDoIf = "Let dentro de um If"   //local, não pode ser chamada no escopo global
+        var varDentroDoIf = "Var dentro de um If"   //local, mas pode ser chamada no escopo global
+    }
+
+
+    //Funções Literais
+    function soma(){
+        document.write(2 + 3 + "<br>");
+    }
+    soma();
+
+
+    //Funções com parâmetros
+    function nomeCompleto(nome, sobrenome){
+        document.write(nome + " " + sobrenome);
+    }
+    nomeCompleto("Izabela", "França");
+
+
+    //Funções Anônimas
+    let semNome = function(){
+        alert("Estou em uma função anônima.")
+    }
+    semNome();
+</script>
+<body>
+    
+</body>
+</html>
