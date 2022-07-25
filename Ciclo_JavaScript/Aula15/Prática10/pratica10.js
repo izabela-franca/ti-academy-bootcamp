@@ -6,7 +6,7 @@ window.onload = function(){
     botao.addEventListener('click', function(){
         let numero = Number(tabuada.value)
     
-        if (typeof numero !== "number"){
+        if (isNaN(numero)){
             resp.innerHTML = "Digite um valor numérico válido."
         } else {
             if (numero < 1 || numero > 10){
