@@ -1,0 +1,21 @@
+----------* Aula 1 * ----------
+
+
+- MVC : Model, View, Controller	
+	- View: front-end;
+	- Controller: onde ficam todas os serviços/ ações disponibilizados pelo sistema;
+	- Model: onde ficam as classes do sistema;
+
+- Quando o cliente está em uma tecla e clica em um botão, esse botão chama o Controller. O Controller tem a capacidade de pegar todos os dados na tela e passar para a camada de Modelo. O Modelo, por sua vez, tem a funcionalida de armazenar esses dados para que possam ser usados em uma pro´xoma vez. 
+
+- A camadas são independentes, mas interagem entre si.
+
+- Models:
+	- São as classes necessárias para o sistema, por exemplo: Clientes, Pedidos, Serviços e ItemPedido.
+	- Essas classes terão associações:
+		- 1; 1..*; 0..*;
+		- Toda vez que temos associações de MUITOS (*) para MUITOS(*), devemos criar uma classe associativa.
+
+
+
+----------* Aula 2 * ----------
