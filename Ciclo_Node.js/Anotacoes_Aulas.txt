@@ -19,3 +19,13 @@
 
 ----------* Aula 2 * ----------
 
+- Express: framework para aplicações web o qual permite que trabalhemos com rotas.
+- Cors: permite a troca de informações entre as camadas de View, Model e Controller.
+- Sequelize: necessário para utilizar Banco de Dados. Faz o mapeamento do nosso Banco de Dados.
+- Sequelize Cli: permite que façamos as migrações dos dados.
+
+- Para criar uma base de dados precisamos ter nosso servidor (Xammp; Wamserver) rodando.
+
+- Devemos criar um modelo e depois migrá-lo para o Banco de Dados.
+- Criamos as classes a partir do comando: npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string.
+- E alteramos os dados necessários a partir do modelo criado.
