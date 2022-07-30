@@ -1,6 +1,5 @@
 ----------* Aula 1 * ----------
 
-
 - MVC : Model, View, Controller	
 	- View: front-end;
 	- Controller: onde ficam todas os serviços/ ações disponibilizados pelo sistema;
@@ -19,3 +18,4 @@
 
 
 ----------* Aula 2 * ----------
+
