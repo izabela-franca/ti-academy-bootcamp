@@ -16,7 +16,6 @@
 		- Toda vez que temos associações de MUITOS (*) para MUITOS(*), devemos criar uma classe associativa.
 
 
-
 ----------* Aula 2 * ----------
 
 - Express: framework para aplicações web o qual permite que trabalhemos com rotas.
@@ -29,3 +28,21 @@
 - Devemos criar um modelo e depois migrá-lo para o Banco de Dados.
 - Criamos as classes a partir do comando: npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string.
 - E alteramos os dados necessários a partir do modelo criado.
+
+
+----------* Aula 3 * ----------
+
+- Associações:
+	- hasOne: tem apenas uma ocorrência (1 para 1);
+	- belongsTo: um pertence ao outro;
+	- hasMany: tem uma ou muitas ocorrências;
+	- belongsToMany: pertence a muitos (muitos para muitos) -> Cria-se uma terceira classe;
+	
+
+----------* Aula 4 * ----------
+
+- Chave primária: é um atributo que irá permitir que exista apenas um registro na base de dados.
+- Chave estrangeira: é uma referência em uma tabela a uma chave primária de outra tabela.
+- Sempre que tivermos um relacionamento de UM para MUITOS, o atributo chave primária precisa ir para outra tabela como chave estrangeira.
+- Sempre que tivermos um item de associação, a chave primária será composta pelas chaves primárias das duas tabelas que resultaram sua existência.
+
