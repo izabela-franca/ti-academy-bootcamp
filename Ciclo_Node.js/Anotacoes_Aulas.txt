@@ -46,3 +46,7 @@
 - Sempre que tivermos um relacionamento de UM para MUITOS, o atributo chave primária precisa ir para outra tabela como chave estrangeira.
 - Sempre que tivermos um item de associação, a chave primária será composta pelas chaves primárias das duas tabelas que resultaram sua existência.
 
+
+----------* Aula 5 * ----------
+
+- CRUD: Create, Retrieve, Update e Delete.
