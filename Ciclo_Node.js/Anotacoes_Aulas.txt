@@ -50,3 +50,5 @@
 ----------* Aula 5 * ----------
 
 - CRUD: Create, Retrieve, Update e Delete.
+- A troca de informação entre o MVC acontece através do formato de arquivo JSON.
+- Escreveremos nosso código dentro do arquivo Controller.js.
