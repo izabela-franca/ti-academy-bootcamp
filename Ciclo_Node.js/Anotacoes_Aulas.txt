@@ -52,3 +52,7 @@
 - CRUD: Create, Retrieve, Update e Delete.
 - A troca de informação entre o MVC acontece através do formato de arquivo JSON.
 - Escreveremos nosso código dentro do arquivo Controller.js.
+- Toda parte inicial para se criar o Controller pode ser encontrada na documentação do express.
+
+
+----------* Aula 6 * ----------
