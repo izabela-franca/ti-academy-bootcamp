@@ -42,40 +42,52 @@ app.post('/servicos', async(req, res) => {
     });
 });
 
-app.get('/clientes', async(req, res) => {
-    await cliente.create({
-        nome: "Izabela França",
-        endereco: "Rua Marechal Deodoro",
-        cidade: "São Carlos",
-        uf: "SP",
-        nascimento: '1991-05/03',
-        clienteDesde: '2021-02/15',
-        createdAt: new Date(),
-        updatedAt: new Date()
+app.post('/clientes', async(req, res) => {
+    await cliente.create(
+        req.body
+    ).then(function(){     
+        return res.json({
+            error: false,
+            message: 'Cliente criado com sucesso.'
+        })
+    }).catch(function(erro){
+        return res.status(400).json({
+            error: true,
+            message: 'Não foi possível se conectar.'
+        })
     });
-    res.send('Cliente criado com sucesso.')
 });
 
-app.get('/pedidos', async(req, res) => {
-    await pedido.create({
-        data: '2022-08-02',
-        createAt: new Date(),
-        ClienteId: 2,
-        updateAt: new Date()
+app.post('/pedidos', async(req, res) => {
+    await pedido.create(
+        req.body
+    ).then(function(){     
+        return res.json({
+            error: false,
+            message: 'Pedido criado com sucesso.'
+        })
+    }).catch(function(erro){
+        return res.status(400).json({
+            error: true,
+            message: 'Não foi possível se conectar.'
+        })
     });
-    res.send('Pedido criado com sucesso!')
 });
 
-app.get('/itempedidos', async(req, res) => {
-    await itempedido.create({
-        PedidoId: 5,
-        ServicoId: 6,
-        quantidade: 2,
-        valor: 199.90,
-        createAt: new Date(),
-        updateAt: new Date()
+app.post('/itempedidos', async(req, res) => {
+    await itempedido.create(
+            req.body
+    ).then(function(){     
+        return res.json({
+            error: false,
+            message: 'Item pedido criado com sucesso.'
+        })
+    }).catch(function(erro){
+        return res.status(400).json({
+            error: true,
+            message: 'Não foi possível se conectar.'
+        })
     });
-    res.send('Item pedido criado com sucesso!')
 });
 
 
