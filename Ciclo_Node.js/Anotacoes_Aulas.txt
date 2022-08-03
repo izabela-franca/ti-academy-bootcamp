@@ -55,4 +55,17 @@
 - Toda parte inicial para se criar o Controller pode ser encontrada na documentação do express.
 
 
-----------* Aula 6 * ----------
+----------* Aula 7 * ----------
+
+- Métodos:
+	- GET para consultas;
+	- POST para inserções;
+	- PUT para alterações;
+	- DELETE para exclusões;
+	
+- Postman é uma plataforma de API para desenvolvedores projetar, construir, testar e iterar suas APIs.
+	- A partir dele podemos fazer as requisições no próprio corpo do programa;
+	- Colocando o url do localhost, a API 
+
+
+----------* Aula 8 * ----------
