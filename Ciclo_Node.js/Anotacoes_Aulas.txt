@@ -69,3 +69,7 @@
 
 
 ----------* Aula 8 * ----------
+
+- classe.findALL('campo'): retorna todos os dados da classe.
+- classe.findByPk(req.params.campo): pesquisa a partir da Primart Key e retorna os dados.
+- classe.count('campo'): retorna a quantidade de ocorrências.
