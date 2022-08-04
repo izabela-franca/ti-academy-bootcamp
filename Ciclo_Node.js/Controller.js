@@ -27,7 +27,7 @@ app.get('/', function(req, res){
 });
 
 
-//Definindo rotas e inserindo novos registros
+//Inserindo novos registros
 app.post('/servicos', async(req, res) => {
     await servico.create(
         req.body    //Requisição externa
@@ -168,14 +168,20 @@ app.get('/qntpedidos', async(req, res) => {
 
 /*--------------Criando Updates--------------*/
 
-//Retornando as alterações feitas
-app.get('/atualizaservico', async(req, res) => {
-    await servico.findByPk(5)
-    .then(serv => {
-        serv.nome = 'HTML/CSS/JS';
-        serv.descricao = 'Páginas estáticas e dinâmicas estilizadas';
-        serv.save();
-        return res.json({serv})
+//Realizando e retornando as alterações feitas
+app.put('/atualizaservico', async(req, res) => {
+    await servico.update(req.body, {
+        where: {id: req.body.id}
+    }).then(function(){
+        return res.json({
+            error: false,
+            message: "Serviço alterado com sucesso!"
+        });
+    }).catch(function(erro){
+        return res.status(400).json({
+            error: true,
+            message: "Erro na alteração do serviço."
+        });
     });
 });
 

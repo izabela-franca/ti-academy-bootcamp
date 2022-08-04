@@ -84,3 +84,12 @@
 
 - paramFuncao.campo = 'HTML/CSS/JS': Estrturada utilizada para realizar a alteração de um campo. Sempre devemos colocar a alteração em aspas simples.
 - Após feitas as alterações, devemos chamar a função serv.save() para que tudo possa ser salvo antes de retornas o json.
+
+
+----------* Aula 11 * ----------
+
+- Método put: é uma mistura dos métodos GET(obtém os dados) e POST(atualizada os dados).
+- classe.update(): para realizar a atualição através de uma requisição externa.
+
+
+----------* Aula 12 * ----------
