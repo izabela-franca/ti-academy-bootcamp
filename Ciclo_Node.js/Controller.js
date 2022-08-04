@@ -98,7 +98,6 @@ app.post('/itempedidos', async(req, res) => {
 //Retornando todos os serviços criados
 app.get('/listaservicos', async(req, res) => {
     await servico.findAll({
-        //raw: true
         order: [['nome', 'ASC']]   
     }).then(function(servicos){
         res.json({servicos})
@@ -114,7 +113,7 @@ app.get('/ofertaservicos', async(req, res) => {
 });
 
 
-//Retornando a quantidade de um único serviço
+//Retornando um único serviço
 app.get('/servico/:id', async(req, res) => {
     await servico.findByPk(req.params.id)
     .then(serv => {
@@ -127,6 +126,42 @@ app.get('/servico/:id', async(req, res) => {
             error: true,
             message: "Erro: não foi possível conectar!"
         });
+    });
+});
+
+
+//Retornando todos os clientes existentes
+app.get('/listaclientes', async(req, res) => {
+    await cliente.findAll({
+        order: [['clienteDesde', 'ASC']]   
+    }).then(function(clientes){
+        res.json({clientes})
+    });
+});
+
+
+//Retornando a quantidade de clientes existentes
+app.get('/qntclientes', async(req, res) => {
+    await cliente.count('id').then(function(clientes){
+        res.json({clientes});
+    });
+});
+
+
+//Retornando todos os itens pedidos existentes
+app.get('/listaitenspedidos', async(req, res) => {
+    await itempedido.findAll({
+        order: [['valor', 'DESC']]   
+    }).then(function(itempedidos){
+        res.json({itempedidos})
+    });
+});
+
+
+//Retornando a quantidade de pedidos realizados
+app.get('/qntpedidos', async(req, res) => {
+    await pedido.count('id').then(function(pedidos){
+        res.json({pedidos});
     });
 });
 

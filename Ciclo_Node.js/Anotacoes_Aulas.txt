@@ -73,3 +73,8 @@
 - classe.findALL('campo'): retorna todos os dados da classe.
 - classe.findByPk(req.params.campo): pesquisa a partir da Primart Key e retorna os dados.
 - classe.count('campo'): retorna a quantidade de ocorrências.
+
+
+----------* Aula 9 * ----------
+
+- order: [['campo', 'DESC / ASC']]: retorna a consulta em forma decrescente ou crescente.
