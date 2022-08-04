@@ -166,6 +166,20 @@ app.get('/qntpedidos', async(req, res) => {
 });
 
 
+/*--------------Criando Updates--------------*/
+
+//Retornando as alterações feitas
+app.get('/atualizaservico', async(req, res) => {
+    await servico.findByPk(5)
+    .then(serv => {
+        serv.nome = 'HTML/CSS/JS';
+        serv.descricao = 'Páginas estáticas e dinâmicas estilizadas';
+        serv.save();
+        return res.json({serv})
+    });
+});
+
+
 /*--------------Criando portas de acesso--------------*/
 
 let port = process.env.PORT || 3001;

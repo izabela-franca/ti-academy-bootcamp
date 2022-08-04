@@ -78,3 +78,9 @@
 ----------* Aula 9 * ----------
 
 - order: [['campo', 'DESC / ASC']]: retorna a consulta em forma decrescente ou crescente.
+
+
+----------* Aula 10 * ----------
+
+- paramFuncao.campo = 'HTML/CSS/JS': Estrturada utilizada para realizar a alteração de um campo. Sempre devemos colocar a alteração em aspas simples.
+- Após feitas as alterações, devemos chamar a função serv.save() para que tudo possa ser salvo antes de retornas o json.
