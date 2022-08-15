@@ -1,5 +1,0 @@
-----------* Checkpoint 1 * ----------
-
-- React: biblioteca do JS para criar interfaces.
-- Instalações necessárias:
-    - 
