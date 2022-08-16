@@ -1,8 +1,10 @@
 import './App.css';
 import {Routes, Route} from 'react-router-dom';
-import { Home } from './Home';
-import { Clientes } from './Cliente/Clientes'
-import { Menu } from './Menu'
+import {Home} from './views/Home';
+import {ListarClientes} from './views/Cliente/Listar';
+import {ListarPedidos} from './views/Pedido/Listar';
+import {ListarServicos} from './views/Servico/Listar';
+import {Menu} from './Menu';
 
 function App() {
   return (
@@ -10,7 +12,9 @@ function App() {
       <Menu/>
       <Routes>
         <Route path = '/' element={<Home/>} />
-        <Route path = '/listar-clientes' element={<Clientes/>}/>
+        <Route path = '/listar-clientes' element={<ListarClientes/>}/>
+        <Route path = '/listar-pedidos' element={<ListarPedidos/>}/>
+        <Route path = '/listar-servicos' element={<ListarServicos/>}/>
       </Routes>
     </div>
   );
