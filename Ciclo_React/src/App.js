@@ -4,7 +4,7 @@ import {Home} from './views/Home';
 import {ListarClientes} from './views/Cliente/Listar';
 import {ListarPedidos} from './views/Pedido/Listar';
 import {ListarServicos} from './views/Servico/Listar';
-import {Menu} from './Menu';
+import {Menu} from './components/Menu';
 
 function App() {
   return (

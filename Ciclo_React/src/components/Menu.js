@@ -17,7 +17,7 @@ export const Menu = (args) => {
   
     return (
         <div>
-            <Navbar color="primary" dark expand = "md">
+            <Navbar color="info" dark expand = "md">
                 <Container>
                     <NavbarBrand>Services TI Academy Brasil</NavbarBrand>
                     <NavbarToggler onClick={toggle} />

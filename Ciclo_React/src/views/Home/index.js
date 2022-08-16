@@ -12,6 +12,12 @@ export const Home = () => {
                     <div className="p-2">
                         <Link to = "/listar-clientes" className="m-auto btn btn-outline-info btn-sm">Clientes</Link>
                     </div>
+                    <div className="p-2">
+                        <Link to = "/listar-pedidos" className="m-auto btn btn-outline-info btn-sm">Pedidos</Link>
+                    </div>
+                    <div className="p-2">
+                        <Link to = "/listar-servicos" className="m-auto btn btn-outline-info btn-sm">Serviços</Link>
+                    </div>
                 </div>
             </Container>
         </div>
