@@ -1,6 +1,32 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Container, Table } from "reactstrap";
 
+//Importando a aplicação back-end
+import { api } from "../../../config/index";
+
 export const ListarServicos = () => {
+  //Recebendos os dados
+  const [data, setData] = useState([]); //Array vazio para receber os dados
+
+  //Declarando função
+  const getServicos = async () => {
+    await axios
+      .get(api + "/listaservicos")
+      .then((response) => {
+        console.log(response.data.servicos); //traz os dados
+        setData(response.data.servicos); //permite a manipulação dos dados
+      })
+      .catch(() => {
+        console.log("Erro: não foi possível se conectar com a API");
+      });
+  };
+
+  //Chamando a função getServicos através do método useEffect()
+  useEffect(() => {
+    getServicos();
+  }, []);
+
   return (
     <div>
       <Container>
@@ -15,24 +41,14 @@ export const ListarServicos = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th>1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th>2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th>3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
+            {data.map((item) => (
+              <tr key={item.id}>
+                <td>{item.id}</td>
+                <td>{item.nome}</td>
+                <td>{item.descricao}</td>
+                <td className="text-center/">Botão</td>
+              </tr>
+            ))}
           </tbody>
         </Table>
       </Container>
