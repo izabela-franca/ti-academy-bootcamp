@@ -114,12 +114,13 @@ app.get('/ofertaservicos', async(req, res) => {
 
 
 //Retornando um único serviço
-app.get('/servico/:id', async(req, res) => {
-    await servico.findByPk(req.params.id)
-    .then(serv => {
+app.get('/servico/:id/pedidos', async(req, res) => {
+    await itempedido.findAll({
+        where: {ServicoId: req.params.id}})
+    .then(item => {
         return res.json({
             error: false,
-            serv
+            item
         });
     }).catch(function(erro){
         return res.status(400).json({
