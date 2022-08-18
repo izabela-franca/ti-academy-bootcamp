@@ -4,7 +4,7 @@ Contents seen and practiced:
 - CSS3; <br>
 - JavaScript; <br>
 - Node.js; <br>
-- React
+- React;
 
 __________________________________________
 
@@ -14,4 +14,4 @@ Conteúdos vistos e praticados:
 - CSS3; <br>
 - JavaScript; <br>
 - Node.js; <br>
-- React
+- React;
